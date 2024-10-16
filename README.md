@@ -1,5 +1,5 @@
 Año: 2024
-en tete proyecto se usa en la parte de frontend REACT, bootstrap 5, y sweetalert2
+-en este proyecto se usa en la parte de frontend REACT, bootstrap 5, y sweetalert2
 * intala en la parte la carpeta client:
 npx create-react-app .
 npm install react-bootstrap bootstrap
