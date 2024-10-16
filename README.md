@@ -1,7 +1,7 @@
 Año: 2024:
 
 
-En este proyecto se usa REACT, bootstrap 5, y sweetalert2, EXPRES, y MYSQL
+En este CRUD se usa REACT, bootstrap 5, y sweetalert2, EXPRES, y MYSQL
 * intala en la parte la carpeta client:
   
 npx create-react-app .
