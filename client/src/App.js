@@ -36,6 +36,12 @@ function App() {
         html: <i>El empleado <strong>{nombre}</strong> fue registrado con exito!!!</i>,
         icon: "success",
         timer:3000
+      })
+    }).catch(function(error){
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: JSON.parse(JSON.stringify(error)).message==="Network Error"?"Intente mas tarde":JSON.parse(JSON.stringify(error)).message
       });
     });
   
@@ -57,7 +63,13 @@ function App() {
         html: <i>El empleado <strong>{nombre}</strong> fue actualizado con exito!!!</i>,
         icon: "success",
         timer:3000
-      });
+      }).catch(function(error){
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: JSON.parse(JSON.stringify(error)).message==="Network Error"?"Intente mas tarde":JSON.parse(JSON.stringify(error)).message
+        });
+      })
     });
   
   }
@@ -81,9 +93,16 @@ function App() {
             title: "Eliminado!",
             html: <i><strong>{val.nombre}</strong> fue eliminado.</i>,
             icon: "success",
-            timer:3000
+            timer:2000
           });
-        });
+        }).catch(function(error){
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "No se logro eliminar al empleado!",
+            footer: JSON.parse(JSON.stringify(error)).message==="Network Error"?"Intente mas tarde":JSON.parse(JSON.stringify(error)).message
+          });
+        })
        
       }
     });
