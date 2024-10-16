@@ -3,7 +3,7 @@ Año: 2024:
 
 En este CRUD se usa REACT, bootstrap 5, y sweetalert2, EXPRES, y MYSQL
 
-* instala en la parte la carpeta client:
+* instala en la carpeta client:
   
 npx create-react-app .
 
